@@ -13,12 +13,12 @@ export function Hero() {
       
       <div className="container mx-auto px-4 relative z-20 h-screen">
         <div className="flex flex-col items-center">
-          {/* Centered Logo at the top */}
-          <div className="mb-12 mt-8">
+          {/* Reduced logo size */}
+          <div className="mb-8 mt-4">
             <img 
               src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png" 
               alt="Quessada Estética Automotiva" 
-              className="h-24 mx-auto"
+              className="h-16 mx-auto" // Reduced from h-24 to h-16
             />
           </div>
 
