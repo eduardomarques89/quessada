@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   Carousel,
@@ -78,7 +77,7 @@ export function CarouselSection() {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-light font-montserrat leading-tight text-white mb-6">
               Experimente o cuidado que seu{" "}
-              <span className="text-[#384862] font-normal">Carro</span> nunca teve
+              <span className="text-[#CECECD] font-normal">Carro</span> nunca teve
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8">
