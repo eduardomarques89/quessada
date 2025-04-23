@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Paintbrush, Wrench, TicketPercent } from "lucide-react";
@@ -79,13 +78,13 @@ export function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-[#CECECO]/10 p-6 rounded-xl mt-16"
+          className="bg-[#CECECO]/10 p-6 rounded-xl mt-16 flex flex-col items-center text-center"
         >
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-4 justify-center w-full">
             <TicketPercent className="w-8 h-8 text-[#CECECO]" />
             <h2 className="text-3xl font-bold text-[#CECECO]">Oferta Especial - Somente Hoje!</h2>
           </div>
-          <p className="text-gray-400 mb-4 text-lg">
+          <p className="text-gray-400 mb-4 text-lg max-w-2xl mx-auto">
             Aproveite 40% de desconto em qualquer serviço. Não perca esta oportunidade única!
           </p>
           <Button 
