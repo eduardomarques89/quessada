@@ -3,6 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Paintbrush, Wrench, TicketPercent } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const services = [
   {
@@ -52,28 +59,39 @@ export function Services() {
           </motion.p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <Card className="bg-[#232832] border-none hover:bg-[#2A303B] transition-all duration-300">
-                <CardHeader>
-                  <div className={`w-14 h-14 rounded-xl ${service.color} flex items-center justify-center mb-4`}>
-                    <service.icon className="w-7 h-7" />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-white font-montserrat">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 font-montserrat">{service.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {services.map((service, index) => (
+              <CarouselItem key={service.title} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <Card className="bg-[#232832] border-none hover:bg-[#2A303B] transition-all duration-300">
+                    <CardHeader>
+                      <div className={`w-14 h-14 rounded-xl ${service.color} flex items-center justify-center mb-4`}>
+                        <service.icon className="w-7 h-7" />
+                      </div>
+                      <CardTitle className="text-xl font-bold text-white font-montserrat">{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-400 font-montserrat">{service.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12" />
+          <CarouselNext className="hidden md:flex -right-12 h-12 w-12" />
+        </Carousel>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
