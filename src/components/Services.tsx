@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Paintbrush, Wrench, TicketPercent } from "lucide-react";
@@ -26,8 +25,8 @@ const services = [
 ];
 
 export function Services() {
-  const scrollToForm = () => {
-    document.getElementById('whatsapp')?.scrollIntoView({ behavior: 'smooth' });
+  const openWhatsApp = () => {
+    window.open("https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0", "_blank");
   };
 
   return (
@@ -89,7 +88,7 @@ export function Services() {
             Aproveite 40% de desconto em qualquer serviço. Não perca esta oportunidade única!
           </p>
           <Button 
-            onClick={scrollToForm}
+            onClick={openWhatsApp}
             size="lg"
             className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
           >

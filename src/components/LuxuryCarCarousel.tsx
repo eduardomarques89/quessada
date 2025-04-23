@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -29,8 +28,8 @@ const luxuryCarImages = [
 ];
 
 export function LuxuryCarCarousel() {
-  const scrollToForm = () => {
-    document.getElementById('whatsapp')?.scrollIntoView({ behavior: 'smooth' });
+  const openWhatsApp = () => {
+    window.open("https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0", "_blank");
   };
 
   return (
@@ -79,7 +78,7 @@ export function LuxuryCarCarousel() {
 
         <div className="text-center mt-12">
           <Button 
-            onClick={scrollToForm}
+            onClick={openWhatsApp}
             size="lg"
             className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
           >
