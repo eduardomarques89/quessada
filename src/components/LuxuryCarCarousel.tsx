@@ -1,5 +1,32 @@
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+
+const luxuryCarImages = [
+  {
+    url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8",
+    alt: "Carro Luxuoso 1"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab",
+    alt: "Carro Luxuoso 2"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2",
+    alt: "Carro Luxuoso 3"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1583121274602-3e2820c69888",
+    alt: "Carro Luxuoso 4"
+  }
+];
 
 export function LuxuryCarCarousel() {
   const scrollToForm = () => {
