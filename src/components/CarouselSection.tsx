@@ -72,9 +72,9 @@ export function CarouselSection() {
           <div className="aspect-video w-full mb-16 rounded-xl overflow-hidden">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/AV9e-aQuFyo"
+              src="https://www.youtube.com/embed/AV9e-aQuFyo?autoplay=1&controls=1&rel=0&showinfo=0"
               title="Video Institucional"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; allowfullscreen; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
