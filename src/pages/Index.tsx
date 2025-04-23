@@ -9,8 +9,8 @@ export default function Index() {
   return (
     <div className="min-h-screen font-inter">
       <Hero />
-      <Services />
       <CarouselSection />
+      <Services />
       <Reviews />
       <LeadForm />
     </div>
