@@ -59,7 +59,9 @@ export function LuxuryCarCarousel() {
             slidesPerView={1}
             pagination={{
               clickable: true,
-              bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#7689a9]'
+              bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#7689a9]',
+              bulletClass: 'swiper-pagination-bullet border border-white',
+              bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#7689a9] !border-[#7689a9]'
             }}
             loop={true}
             breakpoints={{
