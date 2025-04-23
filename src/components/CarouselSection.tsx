@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import {
   Carousel,
@@ -83,32 +84,34 @@ export function CarouselSection() {
 
         <Carousel
           opts={{
-            align: "start",
+            align: "center",
             loop: true,
           }}
-          className="w-full max-w-5xl mx-auto"
+          className="w-full max-w-6xl mx-auto relative"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-2 md:-ml-4">
             {carImages.map((image, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    className="rounded-xl overflow-hidden aspect-video"
-                  >
-                    <img
-                      src={image.url}
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                </div>
+              <CarouselItem 
+                key={index} 
+                className="pl-2 md:pl-4 basis-full md:basis-2/3 lg:basis-1/2 transition-all duration-300 hover:z-10"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-black/20"
+                >
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                </motion.div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
+          <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12" />
+          <CarouselNext className="hidden md:flex -right-12 h-12 w-12" />
         </Carousel>
       </div>
     </section>
