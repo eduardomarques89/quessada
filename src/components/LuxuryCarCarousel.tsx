@@ -8,9 +8,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const luxuryCarImages = [
   {
@@ -50,10 +50,13 @@ export function LuxuryCarCarousel() {
 
         <div className="relative max-w-6xl mx-auto px-8">
           <Swiper
-            modules={[Navigation]}
+            modules={[Pagination]}
             spaceBetween={20}
             slidesPerView={1}
-            navigation
+            pagination={{
+              clickable: true,
+              bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#7689a9]'
+            }}
             loop={true}
             breakpoints={{
               768: {
@@ -63,7 +66,7 @@ export function LuxuryCarCarousel() {
                 slidesPerView: 2,
               },
             }}
-            className="mySwiper"
+            className="mySwiper !pb-12"
           >
             {luxuryCarImages.map((image, index) => (
               <SwiperSlide key={index}>

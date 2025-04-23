@@ -1,11 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Car, Paintbrush, Wrench, TicketPercent } from "lucide-react";
+import { Car, Paintbrush, Wrench } from "lucide-react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const services = [
   {
@@ -57,10 +57,13 @@ export function Services() {
         
         <div className="relative max-w-6xl mx-auto px-8">
           <Swiper
-            modules={[Navigation]}
+            modules={[Pagination]}
             spaceBetween={20}
             slidesPerView={1}
-            navigation
+            pagination={{
+              clickable: true,
+              bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#7689a9]'
+            }}
             loop={true}
             breakpoints={{
               640: {
@@ -70,7 +73,7 @@ export function Services() {
                 slidesPerView: 3,
               },
             }}
-            className="mySwiper"
+            className="mySwiper !pb-12"
           >
             {services.map((service, index) => (
               <SwiperSlide key={service.title}>

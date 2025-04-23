@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const carImages = [
   {
@@ -86,10 +86,13 @@ export function CarouselSection() {
 
         <div className="relative max-w-5xl mx-auto px-8">
           <Swiper
-            modules={[Navigation]}
+            modules={[Pagination]}
             spaceBetween={20}
             slidesPerView={1}
-            navigation
+            pagination={{
+              clickable: true,
+              bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#7689a9]'
+            }}
             loop={true}
             breakpoints={{
               768: {
@@ -99,7 +102,7 @@ export function CarouselSection() {
                 slidesPerView: 3,
               },
             }}
-            className="mySwiper"
+            className="mySwiper !pb-12"
           >
             {carImages.map((image, index) => (
               <SwiperSlide key={index}>
