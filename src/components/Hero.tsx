@@ -19,11 +19,18 @@ export function Hero() {
             transition={{ duration: 0.8 }}
             className="text-white"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 font-montserrat leading-tight">
-              Transforme seu{" "}
-              <span className="text-red-500">Veículo</span> em uma Obra-Prima
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl">
+            <div className="flex items-center mb-6">
+              <img 
+                src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png" 
+                alt="Quessada Estética Automotiva" 
+                className="h-20 mr-6"
+              />
+              <h1 className="text-4xl md:text-5xl font-light font-montserrat leading-tight">
+                Transforme seu{" "}
+                <span className="text-red-500 font-normal">Veículo</span> em uma Obra-Prima
+              </h1>
+            </div>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl font-inter font-light">
               Descubra o poder da estética automotiva profissional. 
               Agendamento express com atendimento VIP garantido.
             </p>
@@ -35,7 +42,7 @@ export function Hero() {
               <Button 
                 onClick={scrollToForm}
                 size="lg"
-                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full"
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
               >
                 Agendar Avaliação Gratuita
               </Button>
