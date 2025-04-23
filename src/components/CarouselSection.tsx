@@ -62,7 +62,7 @@ export function CarouselSection() {
               className="w-full h-full"
               src="https://www.youtube.com/embed/AV9e-aQuFyo"
               title="Video Institucional"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; allowfullscreen; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
