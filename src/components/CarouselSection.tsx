@@ -61,14 +61,6 @@ export function CarouselSection() {
             />
           </div>
 
-          <Button 
-              onClick={scrollToForm}
-              size="lg"
-              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
-            >
-              Agendar Avaliação Gratuita
-            </Button>
-
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-light font-montserrat leading-tight text-white mb-6">
               Experimente o cuidado que seu{" "}
@@ -80,7 +72,13 @@ export function CarouselSection() {
               Agendamento express com atendimento VIP garantido.
             </p>
 
-            
+            <Button 
+              onClick={scrollToForm}
+              size="lg"
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+            >
+              Agendar Avaliação Gratuita
+            </Button>
           </div>
         </motion.div>
 
