@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Car, Paintbrush, Wrench } from "lucide-react";
@@ -11,8 +10,8 @@ import 'swiper/css/pagination';
 
 const carImages = [
   {
-    url: "/lovable-uploads/59261315-5b6e-4ad2-bbb8-d1d32854bca5.png",
-    alt: "Antes e Depois - Caminhonete"
+    url: "/lovable-uploads/773a4c82-9939-46b5-b244-28b5d3be5dfb.png",
+    alt: "Porsche Vermelho - Antes e Depois"
   },
   {
     url: "/lovable-uploads/5a2fb6bf-fbae-49d3-87ee-7b497f9a716b.png",
