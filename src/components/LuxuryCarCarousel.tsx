@@ -14,6 +14,10 @@ import 'swiper/css/pagination';
 
 const luxuryCarImages = [
   {
+    url: "/lovable-uploads/ee741bf9-d9e0-493e-853f-af0f2a0df60b.png",
+    alt: "Antes e Depois - Polimento"
+  },
+  {
     url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8",
     alt: "Carro Luxuoso 1"
   },
