@@ -4,6 +4,7 @@ import { LeadForm } from "@/components/LeadForm";
 import { Services } from "@/components/Services";
 import { Reviews } from "@/components/Reviews";
 import { CarouselSection } from "@/components/CarouselSection";
+import { FAQ } from "@/components/FAQ";
 
 export default function Index() {
   return (
@@ -12,6 +13,7 @@ export default function Index() {
       <CarouselSection />
       <Services />
       <Reviews />
+      <FAQ />
       <LeadForm />
     </div>
   );
