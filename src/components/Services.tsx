@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Paintbrush, Wrench, TicketPercent } from "lucide-react";
@@ -8,19 +9,19 @@ const services = [
     title: "Polimento Cristalizado",
     description: "Recupere o brilho original da pintura do seu veículo com nosso polimento profissional.",
     icon: Paintbrush,
-    color: "bg-[#CECECO]/10 text-[#CECECO]"
+    color: "bg-[#7689a9]/10 text-[#7689a9]"
   },
   {
     title: "Proteção Cerâmica",
     description: "Proteja a pintura do seu carro com a mais avançada tecnologia em revestimento cerâmico.",
     icon: Car,
-    color: "bg-[#CECECO]/10 text-[#CECECO]"
+    color: "bg-[#7689a9]/10 text-[#7689a9]"
   },
   {
     title: "Higienização Completa",
     description: "Limpeza profunda de todo o interior do seu veículo, eliminando vírus e bactérias.",
     icon: Wrench,
-    color: "bg-[#CECECO]/10 text-[#CECECO]"
+    color: "bg-[#7689a9]/10 text-[#7689a9]"
   }
 ];
 
