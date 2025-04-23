@@ -1,15 +1,11 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Paintbrush, Wrench, TicketPercent } from "lucide-react";
 import { motion } from "framer-motion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const services = [
   {
@@ -59,16 +55,25 @@ export function Services() {
           </motion.p>
         </div>
         
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-6xl mx-auto"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
+        <div className="relative max-w-6xl mx-auto px-8">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            loop={true}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="mySwiper"
+          >
             {services.map((service, index) => (
-              <CarouselItem key={service.title} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+              <SwiperSlide key={service.title}>
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -86,12 +91,10 @@ export function Services() {
                     </CardContent>
                   </Card>
                 </motion.div>
-              </CarouselItem>
+              </SwiperSlide>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12" />
-          <CarouselNext className="hidden md:flex -right-12 h-12 w-12" />
-        </Carousel>
+          </Swiper>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

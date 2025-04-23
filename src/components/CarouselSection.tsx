@@ -1,13 +1,10 @@
 import { useState } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const carImages = [
   {
@@ -87,16 +84,25 @@ export function CarouselSection() {
           </div>
         </motion.div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-5xl mx-auto"
-        >
-          <CarouselContent>
+        <div className="relative max-w-5xl mx-auto px-8">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            loop={true}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="mySwiper"
+          >
             {carImages.map((image, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <SwiperSlide key={index}>
                 <div className="p-1">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
@@ -110,12 +116,10 @@ export function CarouselSection() {
                     />
                   </motion.div>
                 </div>
-              </CarouselItem>
+              </SwiperSlide>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
-        </Carousel>
+          </Swiper>
+        </div>
       </div>
     </section>
   );

@@ -7,6 +7,10 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const luxuryCarImages = [
   {
@@ -44,19 +48,25 @@ export function LuxuryCarCarousel() {
           </p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "center",
-            loop: true,
-          }}
-          className="w-full max-w-6xl mx-auto relative"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
+        <div className="relative max-w-6xl mx-auto px-8">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            loop={true}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+            }}
+            className="mySwiper"
+          >
             {luxuryCarImages.map((image, index) => (
-              <CarouselItem 
-                key={index} 
-                className="pl-2 md:pl-4 basis-full md:basis-2/3 lg:basis-1/2 transition-all duration-300 hover:z-10"
-              >
+              <SwiperSlide key={index}>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3 }}
@@ -69,12 +79,10 @@ export function LuxuryCarCarousel() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </motion.div>
-              </CarouselItem>
+              </SwiperSlide>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12" />
-          <CarouselNext className="hidden md:flex -right-12 h-12 w-12" />
-        </Carousel>
+          </Swiper>
+        </div>
 
         <div className="text-center mt-12">
           <Button 
