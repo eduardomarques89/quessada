@@ -1,31 +1,5 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
-const luxuryCarImages = [
-  {
-    url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8",
-    alt: "Luxury Car Detail 1"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab",
-    alt: "Luxury Car Detail 2"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2",
-    alt: "Luxury Car Detail 3"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1583121274602-3e2820c69888",
-    alt: "Luxury Car Detail 4"
-  }
-];
 
 export function LuxuryCarCarousel() {
   const scrollToForm = () => {
@@ -37,7 +11,7 @@ export function LuxuryCarCarousel() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-white mb-4">
-            Galeria de <span className="text-red-500 font-normal">Transformações</span>
+            Galeria de <span className="text-[#384862] font-normal">Transformações</span>
           </h2>
           <p className="text-gray-300 font-montserrat">
             Confira alguns dos nossos trabalhos mais impressionantes
