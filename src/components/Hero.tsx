@@ -18,7 +18,7 @@ export function Hero() {
             <img 
               src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png" 
               alt="Quessada Estética Automotiva" 
-              className="h-16 mx-auto" // Reduced from h-24 to h-16
+              className="h-16 mx-auto"
             />
           </div>
 
@@ -62,8 +62,8 @@ export function Hero() {
               className="hidden md:block"
             >
               <img
-                src="https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?q=80"
-                alt="Carro Premium"
+                src="https://images.unsplash.com/photo-1619679505240-1d43c1b91804?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Serviço de Estética Automotiva"
                 className="rounded-2xl shadow-2xl transform -rotate-6 hover:rotate-0 transition-transform duration-500"
               />
             </motion.div>
@@ -73,3 +73,4 @@ export function Hero() {
     </section>
   );
 }
+
