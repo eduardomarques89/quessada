@@ -41,7 +41,7 @@ export function CarouselSection() {
           <img 
             src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png" 
             alt="Quessada Estética Automotiva" 
-            className="h-20 mx-auto"
+            className="h-10 mx-auto"
           />
         </div>
 
