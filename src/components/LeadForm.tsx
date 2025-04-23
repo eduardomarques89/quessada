@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/components/ui/use-toast";
+import { motion } from "framer-motion";
 
 export function LeadForm() {
   const { toast } = useToast();
@@ -18,47 +19,69 @@ export function LeadForm() {
   };
 
   return (
-    <section className="py-20 bg-white" id="lead-form">
+    <section className="py-20 bg-[#1A1F2C]" id="lead-form">
       <div className="container mx-auto px-4">
-        <Card className="max-w-lg mx-auto">
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold text-center">
-              Agende sua Avaliação Gratuita
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Nome Completo</Label>
-                <Input id="name" required placeholder="Digite seu nome" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="phone">Telefone</Label>
-                <Input id="phone" required placeholder="(00) 00000-0000" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">E-mail</Label>
-                <Input id="email" type="email" required placeholder="seu@email.com" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="service">Serviço Desejado</Label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Selecione o serviço" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="polimento">Polimento Cristalizado</SelectItem>
-                    <SelectItem value="ceramica">Proteção Cerâmica</SelectItem>
-                    <SelectItem value="higienizacao">Higienização Completa</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-600">
-                Agendar Agora
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Card className="max-w-lg mx-auto bg-[#232832] border-none">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-center text-white">
+                Agende sua Avaliação Gratuita
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-gray-300">Nome Completo</Label>
+                  <Input 
+                    id="name" 
+                    required 
+                    placeholder="Digite seu nome" 
+                    className="bg-[#1A1F2C] border-gray-700 text-white placeholder:text-gray-500"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="text-gray-300">Telefone</Label>
+                  <Input 
+                    id="phone" 
+                    required 
+                    placeholder="(00) 00000-0000"
+                    className="bg-[#1A1F2C] border-gray-700 text-white placeholder:text-gray-500"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-gray-300">E-mail</Label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    required 
+                    placeholder="seu@email.com"
+                    className="bg-[#1A1F2C] border-gray-700 text-white placeholder:text-gray-500"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="service" className="text-gray-300">Serviço Desejado</Label>
+                  <Select>
+                    <SelectTrigger className="bg-[#1A1F2C] border-gray-700 text-white">
+                      <SelectValue placeholder="Selecione o serviço" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-[#232832] border-gray-700">
+                      <SelectItem value="polimento" className="text-white hover:bg-[#1A1F2C]">Polimento Cristalizado</SelectItem>
+                      <SelectItem value="ceramica" className="text-white hover:bg-[#1A1F2C]">Proteção Cerâmica</SelectItem>
+                      <SelectItem value="higienizacao" className="text-white hover:bg-[#1A1F2C]">Higienização Completa</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-full">
+                  Agendar Agora
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
     </section>
   );

@@ -8,30 +8,52 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center">
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 z-10" />
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80')"
-        }}
-      />
-      <div className="container mx-auto px-4 relative z-20">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-montserrat">
-            Transforme seu Carro em uma Obra de Arte
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8">
-            Estética automotiva premium com os melhores profissionais e produtos do mercado.
-            Agende agora e garanta um tratamento especial para seu veículo.
-          </p>
-          <Button 
-            onClick={scrollToForm}
-            size="lg"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 text-lg"
+    <section className="relative min-h-screen bg-[#1A1F2C] overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80')] bg-cover bg-center opacity-10" />
+      
+      <div className="container mx-auto px-4 relative z-20 h-screen flex items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-white"
           >
-            Agendar Avaliação Gratuita
-          </Button>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 font-montserrat leading-tight">
+              Transforme seu{" "}
+              <span className="text-blue-500">Veículo</span> em uma Obra-Prima
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl">
+              Descubra o poder da estética automotiva profissional. 
+              Agendamento express com atendimento VIP garantido.
+            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              <Button 
+                onClick={scrollToForm}
+                size="lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 text-lg rounded-full"
+              >
+                Agendar Avaliação Gratuita
+              </Button>
+            </motion.div>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="hidden md:block"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?q=80"
+              alt="Carro Premium"
+              className="rounded-2xl shadow-2xl transform -rotate-6 hover:rotate-0 transition-transform duration-500"
+            />
+          </motion.div>
         </div>
       </div>
     </section>

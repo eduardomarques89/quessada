@@ -1,6 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const reviews = [
   {
@@ -29,41 +29,53 @@ export function Reviews() {
       <Star
         key={index}
         className={`w-5 h-5 ${
-          index < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
+          index < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-600"
         }`}
       />
     ));
   };
 
   return (
-    <section className="py-20 bg-white" id="reviews">
+    <section className="py-20 bg-[#232832]" id="reviews">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold mb-4 font-montserrat text-white"
+          >
             O Que Nossos Clientes Dizem
-          </h2>
+          </motion.h2>
           <div className="flex items-center justify-center gap-2 mb-2">
             {renderStars(5)}
           </div>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-400">
             5.0 no Google • Mais de 100 avaliações
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  {renderStars(review.rating)}
-                </div>
-                <p className="text-gray-700 mb-4">{review.comment}</p>
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold">{review.name}</span>
-                  <span className="text-sm text-gray-500">{review.date}</span>
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
+              <Card className="bg-[#1A1F2C] border-none hover:bg-[#232832] transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    {renderStars(review.rating)}
+                  </div>
+                  <p className="text-gray-300 mb-4">{review.comment}</p>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-white">{review.name}</span>
+                    <span className="text-sm text-gray-500">{review.date}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
