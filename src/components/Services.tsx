@@ -84,7 +84,7 @@ export function Services() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-bold text-[#CECECO] mb-6 max-w-3xl mx-auto leading-tight"
+            className="text-4xl md:text-6xl font-bold text-[#F2FCE2] mb-6 max-w-3xl mx-auto leading-tight"
           >
             Ganhe 3 Serviços Exclusivos
           </motion.h2>
