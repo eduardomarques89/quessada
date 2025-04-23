@@ -13,7 +13,6 @@ export function Hero() {
       
       <div className="container mx-auto px-4 relative z-20 h-screen">
         <div className="flex flex-col items-center">
-          {/* Reduced logo size */}
           <div className="mb-8 mt-4">
             <img 
               src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png" 
@@ -30,8 +29,8 @@ export function Hero() {
               className="text-white text-center md:text-left"
             >
               <h1 className="text-4xl md:text-5xl font-light font-montserrat leading-tight">
-                Transforme seu{" "}
-                <span className="text-red-500 font-normal">Veículo</span> em uma Obra-Prima
+                Experimente o cuidado que seu{" "}
+                <span className="text-red-500 font-normal">Carro</span> nunca teve
               </h1>
               
               <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl font-inter font-light mx-auto md:mx-0">
@@ -73,4 +72,3 @@ export function Hero() {
     </section>
   );
 }
-
