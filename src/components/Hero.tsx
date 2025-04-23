@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -29,7 +30,7 @@ export function Hero() {
             >
               <h1 className="text-4xl md:text-5xl font-bold font-montserrat leading-tight">
                 Experimente o cuidado que seu{" "}
-                <span className="text-[#CECECD]">Carro</span> nunca teve
+                <span className="text-[#7689a9]">Carro</span> nunca teve
               </h1>
               
               <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl font-montserrat mx-auto md:mx-0">
