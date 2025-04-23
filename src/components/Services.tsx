@@ -24,6 +24,10 @@ const services = [
 ];
 
 export function Services() {
+  const scrollToForm = () => {
+    document.getElementById('whatsapp')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="py-20 bg-black" id="services">
       <div className="container mx-auto px-4">
@@ -68,6 +72,21 @@ export function Services() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <Button 
+            onClick={scrollToForm}
+            size="lg"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+          >
+            Conhecer Nossos Serviços
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

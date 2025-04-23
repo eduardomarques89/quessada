@@ -24,6 +24,10 @@ const reviews = [
 ];
 
 export function Reviews() {
+  const scrollToForm = () => {
+    document.getElementById('whatsapp')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, index) => (
       <Star
@@ -78,6 +82,21 @@ export function Reviews() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <Button 
+            onClick={scrollToForm}
+            size="lg"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+          >
+            Agendar Seu Horário
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

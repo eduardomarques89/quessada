@@ -28,6 +28,10 @@ const luxuryCarImages = [
 ];
 
 export function LuxuryCarCarousel() {
+  const scrollToForm = () => {
+    document.getElementById('whatsapp')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="py-20 bg-[#1A1F2C]">
       <div className="container mx-auto px-4">
@@ -71,6 +75,16 @@ export function LuxuryCarCarousel() {
           <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12" />
           <CarouselNext className="hidden md:flex -right-12 h-12 w-12" />
         </Carousel>
+
+        <div className="text-center mt-12">
+          <Button 
+            onClick={scrollToForm}
+            size="lg"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+          >
+            Transforme Seu Veículo
+          </Button>
+        </div>
       </div>
     </section>
   );

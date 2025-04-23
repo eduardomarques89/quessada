@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -34,6 +33,10 @@ const faqData = [
 ];
 
 export function FAQ() {
+  const scrollToForm = () => {
+    document.getElementById('whatsapp')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="py-20 bg-black" id="faq">
       <div className="container mx-auto px-4">
@@ -58,6 +61,15 @@ export function FAQ() {
               </AccordionItem>
             ))}
           </Accordion>
+          <div className="text-center mt-12">
+            <Button 
+              onClick={scrollToForm}
+              size="lg"
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+            >
+              Falar com Especialista
+            </Button>
+          </div>
         </div>
       </div>
     </section>
