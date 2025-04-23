@@ -10,7 +10,6 @@ export default function Index() {
   return (
     <div className="min-h-screen font-inter bg-black">
       <CarouselSection />
-      <Hero />
       <Services />
       <Reviews />
       <FAQ />
