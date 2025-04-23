@@ -28,12 +28,12 @@ export function Hero() {
               transition={{ duration: 0.8 }}
               className="text-white text-center md:text-left"
             >
-              <h1 className="text-4xl md:text-5xl font-light font-montserrat leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold font-montserrat leading-tight">
                 Experimente o cuidado que seu{" "}
-                <span className="text-red-500 font-normal">Carro</span> nunca teve
+                <span className="text-red-500">Carro</span> nunca teve
               </h1>
               
-              <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl font-inter font-light mx-auto md:mx-0">
+              <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl font-montserrat mx-auto md:mx-0">
                 Descubra o poder da estética automotiva profissional. 
                 Agendamento express com atendimento VIP garantido.
               </p>
@@ -47,7 +47,7 @@ export function Hero() {
                 <Button 
                   onClick={scrollToForm}
                   size="lg"
-                  className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+                  className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
                 >
                   Agendar Avaliação Gratuita
                 </Button>

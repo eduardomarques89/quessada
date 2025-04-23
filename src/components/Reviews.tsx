@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
@@ -56,7 +55,7 @@ export function Reviews() {
           <div className="flex items-center justify-center gap-2 mb-2">
             {renderStars(5)}
           </div>
-          <p className="text-lg text-gray-400">
+          <p className="text-lg text-gray-400 font-montserrat">
             5.0 no Google • Mais de 100 avaliações
           </p>
         </div>
@@ -74,10 +73,10 @@ export function Reviews() {
                   <div className="flex items-center gap-2 mb-4">
                     {renderStars(review.rating)}
                   </div>
-                  <p className="text-gray-300 mb-4">{review.comment}</p>
+                  <p className="text-gray-300 mb-4 font-montserrat">{review.comment}</p>
                   <div className="flex justify-between items-center">
-                    <span className="font-semibold text-white">{review.name}</span>
-                    <span className="text-sm text-gray-500">{review.date}</span>
+                    <span className="font-bold text-white font-montserrat">{review.name}</span>
+                    <span className="text-sm text-gray-500 font-montserrat">{review.date}</span>
                   </div>
                 </CardContent>
               </Card>
@@ -94,7 +93,7 @@ export function Reviews() {
           <Button 
             onClick={scrollToForm}
             size="lg"
-            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
           >
             Agendar Seu Horário
           </Button>

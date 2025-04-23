@@ -46,7 +46,7 @@ export function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 max-w-2xl mx-auto"
+            className="text-gray-400 max-w-2xl mx-auto font-montserrat"
           >
             Oferecemos os melhores serviços de estética automotiva, utilizando produtos e técnicas de última geração
           </motion.p>
@@ -65,10 +65,10 @@ export function Services() {
                   <div className={`w-14 h-14 rounded-xl ${service.color} flex items-center justify-center mb-4`}>
                     <service.icon className="w-7 h-7" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-white">{service.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold text-white font-montserrat">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-400">{service.description}</p>
+                  <p className="text-gray-400 font-montserrat">{service.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -84,7 +84,7 @@ export function Services() {
           <Button 
             onClick={scrollToForm}
             size="lg"
-            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
           >
             Conhecer Nossos Serviços
           </Button>

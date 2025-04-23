@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -37,10 +36,10 @@ export function LuxuryCarCarousel() {
     <section className="py-20 bg-[#1A1F2C]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-light font-montserrat text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-white mb-4">
             Galeria de <span className="text-red-500 font-normal">Transformações</span>
           </h2>
-          <p className="text-gray-300">
+          <p className="text-gray-300 font-montserrat">
             Confira alguns dos nossos trabalhos mais impressionantes
           </p>
         </div>
@@ -81,7 +80,7 @@ export function LuxuryCarCarousel() {
           <Button 
             onClick={scrollToForm}
             size="lg"
-            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
           >
             Transforme Seu Veículo
           </Button>

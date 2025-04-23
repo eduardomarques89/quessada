@@ -42,8 +42,8 @@ export function FAQ() {
   return (
     <section className="py-20 bg-black" id="faq">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-light font-montserrat text-center mb-12 text-white">
-          Dúvidas <span className="text-red-500 font-normal">Frequentes</span>
+        <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-center mb-12 text-white">
+          Dúvidas <span className="text-red-500">Frequentes</span>
         </h2>
         
         <div className="max-w-3xl mx-auto">
@@ -54,10 +54,10 @@ export function FAQ() {
                 value={`item-${index}`}
                 className="border border-gray-800 rounded-lg px-4"
               >
-                <AccordionTrigger className="text-left font-inter font-medium py-4 text-white">
+                <AccordionTrigger className="text-left font-montserrat font-medium py-4 text-white">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-white font-light pb-4">
+                <AccordionContent className="text-white font-montserrat pb-4">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -67,7 +67,7 @@ export function FAQ() {
             <Button 
               onClick={scrollToForm}
               size="lg"
-              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
             >
               Falar com Especialista
             </Button>
