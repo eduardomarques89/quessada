@@ -34,7 +34,7 @@ export function CarouselSection() {
   };
 
   return (
-    <section className="py-10 bg-[#1A1F2C]">
+    <section className="py-10 bg-black">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <img 
