@@ -4,6 +4,7 @@ import { Services } from "@/components/Services";
 import { Reviews } from "@/components/Reviews";
 import { CarouselSection } from "@/components/CarouselSection";
 import { FAQ } from "@/components/FAQ";
+import { LuxuryCarCarousel } from "@/components/LuxuryCarCarousel";
 
 export default function Index() {
   return (
@@ -12,6 +13,7 @@ export default function Index() {
       <Services />
       <Reviews />
       <FAQ />
+      <LuxuryCarCarousel />
     </div>
   );
 }
