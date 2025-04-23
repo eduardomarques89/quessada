@@ -1,3 +1,4 @@
+
 import {
   Accordion,
   AccordionContent,
@@ -48,10 +49,10 @@ export function FAQ() {
                 value={`item-${index}`}
                 className="border border-gray-800 rounded-lg px-4"
               >
-                <AccordionTrigger className="text-left font-inter font-medium py-4">
+                <AccordionTrigger className="text-left font-inter font-medium py-4 text-white">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-300 font-light pb-4">
+                <AccordionContent className="text-white font-light pb-4">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
