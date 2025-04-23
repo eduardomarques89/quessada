@@ -21,7 +21,7 @@ export function Hero() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 font-montserrat leading-tight">
               Transforme seu{" "}
-              <span className="text-blue-500">Veículo</span> em uma Obra-Prima
+              <span className="text-red-500">Veículo</span> em uma Obra-Prima
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl">
               Descubra o poder da estética automotiva profissional. 
@@ -35,7 +35,7 @@ export function Hero() {
               <Button 
                 onClick={scrollToForm}
                 size="lg"
-                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 text-lg rounded-full"
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full"
               >
                 Agendar Avaliação Gratuita
               </Button>

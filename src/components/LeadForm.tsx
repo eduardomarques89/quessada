@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -75,7 +74,7 @@ export function LeadForm() {
                     </SelectContent>
                   </Select>
                 </div>
-                <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-full">
+                <Button type="submit" className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full">
                   Agendar Agora
                 </Button>
               </form>
