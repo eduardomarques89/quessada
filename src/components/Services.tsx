@@ -80,6 +80,14 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="bg-[#CECECO]/10 p-6 rounded-xl mt-16 flex flex-col items-center text-center"
         >
+          <motion.h2 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-6xl font-bold text-[#CECECO] mb-6 max-w-3xl mx-auto leading-tight"
+          >
+            Ganhe 3 Serviços Exclusivos
+          </motion.h2>
           <div className="flex items-center gap-3 mb-4 justify-center w-full">
             <TicketPercent className="w-8 h-8 text-[#CECECO]" />
             <h2 className="text-3xl font-bold text-[#CECECO]">Oferta Especial - Somente Hoje!</h2>
