@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import {
   Carousel,
@@ -50,6 +51,10 @@ export function CarouselSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+            Assista este video antes de agendar o serviço
+          </h2>
+          
           <div className="aspect-video w-full mb-16 rounded-xl overflow-hidden">
             <iframe
               className="w-full h-full"
