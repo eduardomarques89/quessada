@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Paintbrush, Wrench, TicketPercent } from "lucide-react";
@@ -38,7 +37,7 @@ export function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-[#CECECD] mb-4 font-montserrat"
+            className="text-3xl md:text-4xl font-bold text-white mb-4 font-montserrat"
           >
             Método de polimento proteção PREMIUM
           </motion.h2>
@@ -85,13 +84,13 @@ export function Services() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-bold text-[#CECECD] mb-6 max-w-3xl mx-auto leading-tight"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-3xl mx-auto leading-tight"
           >
             Ganhe 3 Serviços Exclusivos
           </motion.h2>
           <div className="flex items-center gap-3 mb-4 justify-center w-full">
-            <TicketPercent className="w-8 h-8 text-[#CECECD]" />
-            <h2 className="text-3xl font-bold text-[#CECECD]">Oferta Especial - Somente Hoje!</h2>
+            <TicketPercent className="w-8 h-8 text-white" />
+            <h2 className="text-3xl font-bold text-white">Oferta Especial - Somente Hoje!</h2>
           </div>
           <p className="text-gray-400 mb-4 text-lg max-w-2xl mx-auto">
             Aproveite 40% de desconto em qualquer serviço. Não perca esta oportunidade única!
@@ -108,4 +107,3 @@ export function Services() {
     </section>
   );
 }
-
