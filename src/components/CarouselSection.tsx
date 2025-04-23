@@ -67,7 +67,7 @@ export function CarouselSection() {
               size="lg"
               className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
             >
-              Agendar Avaliação Gratuita
+              Agendar o Serviço
             </Button>
           </div>
 

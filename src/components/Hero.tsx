@@ -49,7 +49,7 @@ export function Hero() {
                   size="lg"
                   className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
                 >
-                  Agendar Avaliação Gratuita
+                  Agendar o Serviço
                 </Button>
               </motion.div>
             </motion.div>
