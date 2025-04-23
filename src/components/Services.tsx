@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Car, Paintbrush, Wrench } from "lucide-react";
 import { motion } from "framer-motion";
@@ -26,7 +25,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-20 bg-[#1A1F2C]" id="services">
+    <section className="py-20 bg-black" id="services">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2

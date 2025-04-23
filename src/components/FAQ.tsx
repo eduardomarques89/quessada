@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -35,7 +34,7 @@ const faqData = [
 
 export function FAQ() {
   return (
-    <section className="bg-black text-white py-20">
+    <section className="py-20 bg-black" id="faq">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-light font-montserrat text-center mb-12">
           Dúvidas <span className="text-red-500 font-normal">Frequentes</span>

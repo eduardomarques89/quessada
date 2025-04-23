@@ -8,7 +8,7 @@ import { FAQ } from "@/components/FAQ";
 
 export default function Index() {
   return (
-    <div className="min-h-screen font-inter">
+    <div className="min-h-screen font-inter bg-black">
       <Hero />
       <CarouselSection />
       <Services />

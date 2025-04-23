@@ -18,7 +18,7 @@ export function LeadForm() {
   };
 
   return (
-    <section className="py-20 bg-[#1A1F2C]" id="lead-form">
+    <section className="py-20 bg-black" id="lead-form">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

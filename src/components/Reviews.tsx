@@ -36,7 +36,7 @@ export function Reviews() {
   };
 
   return (
-    <section className="py-20 bg-[#232832]" id="reviews">
+    <section className="py-20 bg-black" id="reviews">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <motion.h2
