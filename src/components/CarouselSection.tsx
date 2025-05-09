@@ -70,14 +70,15 @@ export function CarouselSection() {
           </h2>
           
           <div className="aspect-video w-full mb-16 rounded-xl overflow-hidden">
-            <iframe
+            <video
               className="w-full h-full"
-              src="https://www.youtube.com/embed/AV9e-aQuFyo?autoplay=1&controls=1&rel=0&showinfo=0"
-              title="Video Institucional"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              src="/video/ConhecaQuessada.mp4"            
+              loop
+              playsInline
+              controls={false}
             />
           </div>
+
 
           <div className="text-center max-w-3xl mx-auto mb-8">
             <Button 
