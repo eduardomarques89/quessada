@@ -70,15 +70,14 @@ export function CarouselSection() {
           </h2>
           
           <div className="aspect-video w-full mb-16 rounded-xl overflow-hidden">
-            <video
-              className="w-full h-full"
-              src="/video/ConhecaQuessada.mp4"
-              autoPlay
-              muted            
-              loop
-              playsInline
-              controls={false}
-            />
+          <video
+            className="w-full h-full"
+            src="/video/ConhecaQuessada.mp4"
+            autoPlay
+            loop
+            controls
+            playsInline
+          />
           </div>
 
 
