@@ -14,16 +14,16 @@ const carImages = [
     alt: "Porsche Vermelho - Antes e Depois",
   },
   {
-    url: "/lovable-uploads/59261315-5b6e-4ad2-bbb8-d1d32854bca5.png",
+    url: "/lovable-uploads/externa_ram.png",
     alt: "Antes e Depois - Caminhonete",
   },
   {
-    url: "/lovable-uploads/5a2fb6bf-fbae-49d3-87ee-7b497f9a716b.png",
+    url: "/lovable-uploads/externa_volvo.png",
     alt: "Antes e Depois - Porsche",
   },
   {
-    url: "/lovable-uploads/ee741bf9-d9e0-493e-853f-af0f2a0df60b.png",
-    alt: "Antes e Depois - Polimento",
+    url: "/lovable-uploads/externa_porsche.png",
+    alt: "Externa Porsche",
   },
 ];
 

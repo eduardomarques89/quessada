@@ -18,11 +18,11 @@ const luxuryCarImages = [
     alt: "Interna Mercedes-Benz",
   },
   {
-    url: "/lovable-uploads/externa_volvo.png",
+    url: "/lovable-uploads/externa_garagem.png",
     alt: "Externa Volvo",
   },
   {
-    url: "/lovable-uploads/externa_ram.png",
+    url: "/lovable-uploads/externa_moto.png",
     alt: "Externa RAM",
   },
   {
