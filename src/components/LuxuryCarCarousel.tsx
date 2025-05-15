@@ -7,49 +7,44 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const luxuryCarImages = [
   {
-    url: "/lovable-uploads/773a4c82-9939-46b5-b244-28b5d3be5dfb.png",
-    alt: "Porsche Vermelho - Antes e Depois"
+    url: "/lovable-uploads/interna_meca.png",
+    alt: "Interna Mercedes-Benz",
   },
   {
-    url: "/lovable-uploads/59261315-5b6e-4ad2-bbb8-d1d32854bca5.png",
-    alt: "Antes e Depois - Caminhonete"
+    url: "/lovable-uploads/externa_volvo.png",
+    alt: "Externa Volvo",
   },
   {
-    url: "/lovable-uploads/5a2fb6bf-fbae-49d3-87ee-7b497f9a716b.png",
-    alt: "Antes e Depois - Porsche"
+    url: "/lovable-uploads/externa_ram.png",
+    alt: "Externa RAM",
   },
   {
-    url: "/lovable-uploads/ee741bf9-d9e0-493e-853f-af0f2a0df60b.png",
-    alt: "Antes e Depois - Polimento"
+    url: "/lovable-uploads/externa_porsche.png",
+    alt: "Externa Porsche",
   },
   {
-    url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8",
-    alt: "Carro Luxuoso 1"
+    url: "/lovable-uploads/externa_moto.png",
+    alt: "Externa Moto",
   },
   {
-    url: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab",
-    alt: "Carro Luxuoso 2"
+    url: "/lovable-uploads/externa_garagem.png",
+    alt: "Externa Garagem",
   },
-  {
-    url: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2",
-    alt: "Carro Luxuoso 3"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1583121274602-3e2820c69888",
-    alt: "Carro Luxuoso 4"
-  }
 ];
 
 export function LuxuryCarCarousel() {
   const openWhatsApp = () => {
-    window.open("https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0", "_blank");
+    window.open(
+      "https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0",
+      "_blank"
+    );
   };
 
   return (
@@ -57,7 +52,8 @@ export function LuxuryCarCarousel() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-white mb-4">
-            Galeria de <span className="text-[#CECECO] font-normal">Transformações</span>
+            Galeria de{" "}
+            <span className="text-[#CECECO] font-normal">Transformações</span>
           </h2>
           <p className="text-gray-300 font-montserrat">
             Confira alguns dos nossos trabalhos mais impressionantes
@@ -71,8 +67,9 @@ export function LuxuryCarCarousel() {
             slidesPerView={1}
             pagination={{
               clickable: true,
-              bulletClass: 'swiper-pagination-bullet border border-white',
-              bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#7689a9] !border-[#7689a9]'
+              bulletClass: "swiper-pagination-bullet border border-white",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active !bg-[#7689a9] !border-[#7689a9]",
             }}
             loop={true}
             breakpoints={{
@@ -105,7 +102,7 @@ export function LuxuryCarCarousel() {
         </div>
 
         <div className="text-center mt-12">
-          <Button 
+          <Button
             onClick={openWhatsApp}
             size="lg"
             className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"

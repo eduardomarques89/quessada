@@ -3,58 +3,45 @@ import { Button } from "@/components/ui/button";
 import { Car, Paintbrush, Wrench } from "lucide-react";
 import { TicketPercent } from "lucide-react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const carImages = [
   {
     url: "/lovable-uploads/773a4c82-9939-46b5-b244-28b5d3be5dfb.png",
-    alt: "Porsche Vermelho - Antes e Depois"
+    alt: "Porsche Vermelho - Antes e Depois",
   },
-   {
+  {
     url: "/lovable-uploads/59261315-5b6e-4ad2-bbb8-d1d32854bca5.png",
-    alt: "Antes e Depois - Caminhonete"
+    alt: "Antes e Depois - Caminhonete",
   },
   {
     url: "/lovable-uploads/5a2fb6bf-fbae-49d3-87ee-7b497f9a716b.png",
-    alt: "Antes e Depois - Porsche"
+    alt: "Antes e Depois - Porsche",
   },
   {
     url: "/lovable-uploads/ee741bf9-d9e0-493e-853f-af0f2a0df60b.png",
-    alt: "Antes e Depois - Polimento"
+    alt: "Antes e Depois - Polimento",
   },
-  {
-    url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8",
-    alt: "Carro Luxuoso 1"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab",
-    alt: "Carro Luxuoso 2"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2",
-    alt: "Carro Luxuoso 3"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1583121274602-3e2820c69888",
-    alt: "Carro Luxuoso 4"
-  }
 ];
 
 export function CarouselSection() {
   const openWhatsApp = () => {
-    window.open("https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0", "_blank");
+    window.open(
+      "https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0",
+      "_blank"
+    );
   };
 
   return (
     <section className="py-10 bg-black">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
-          <img 
-            src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png" 
-            alt="Quessada Estética Automotiva" 
+          <img
+            src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png"
+            alt="Quessada Estética Automotiva"
             className="h-10 mx-auto"
           />
         </div>
@@ -68,21 +55,20 @@ export function CarouselSection() {
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
             Assista este video antes de agendar o serviço
           </h2>
-          
+
           <div className="aspect-video w-full mb-16 rounded-xl overflow-hidden">
-          <video
-            className="w-full h-full"
-            src="/video/ConhecaQuessada.mp4"
-            autoPlay
-            loop
-            controls
-            playsInline
-          />
+            <video
+              className="w-full h-full"
+              src="/video/ConhecaQuessada.mp4"
+              autoPlay
+              loop
+              controls
+              playsInline
+            />
           </div>
 
-
           <div className="text-center max-w-3xl mx-auto mb-8">
-            <Button 
+            <Button
               onClick={openWhatsApp}
               size="lg"
               className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-inter font-medium"
@@ -94,12 +80,13 @@ export function CarouselSection() {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-light font-montserrat leading-tight text-white mb-6">
               Experimente o cuidado que seu{" "}
-              <span className="text-[#7689a9] font-normal">Carro</span> nunca teve
+              <span className="text-[#7689a9] font-normal">Carro</span> nunca
+              teve
             </h1>
-            
+
             <p className="text-lg md:text-xl text-gray-300 mb-8">
-              Descubra o poder da estética automotiva profissional. 
-              Agendamento express com atendimento VIP garantido.
+              Descubra o poder da estética automotiva profissional. Agendamento
+              express com atendimento VIP garantido.
             </p>
           </div>
         </motion.div>
@@ -111,8 +98,9 @@ export function CarouselSection() {
             slidesPerView={1}
             pagination={{
               clickable: true,
-              bulletClass: 'swiper-pagination-bullet border border-white',
-              bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#7689a9] !border-[#7689a9]'
+              bulletClass: "swiper-pagination-bullet border border-white",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active !bg-[#7689a9] !border-[#7689a9]",
             }}
             loop={true}
             breakpoints={{
