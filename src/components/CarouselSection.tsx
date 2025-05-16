@@ -42,7 +42,7 @@ export function CarouselSection() {
           <img
             src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png"
             alt="Quessada Estética Automotiva"
-            className="h-10 mx-auto"
+            className="h-10 mx-auto object-cover"
           />
         </div>
 
@@ -53,7 +53,7 @@ export function CarouselSection() {
           className="mb-16"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
-            Assista este video antes de agendar o serviço
+            Assista este vídeo antes de agendar o serviço:
           </h2>
 
           <div className="aspect-video w-full mb-16 rounded-xl overflow-hidden">
@@ -80,7 +80,7 @@ export function CarouselSection() {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-light font-montserrat leading-tight text-white mb-6">
               Experimente o cuidado que seu{" "}
-              <span className="text-[#7689a9] font-normal">Carro</span> nunca
+              <span className="text-[#ff9823] font-normal">Carro</span> nunca
               teve
             </h1>
 
@@ -100,7 +100,7 @@ export function CarouselSection() {
               clickable: true,
               bulletClass: "swiper-pagination-bullet border border-white",
               bulletActiveClass:
-                "swiper-pagination-bullet-active !bg-[#7689a9] !border-[#7689a9]",
+                "swiper-pagination-bullet-active !bg-[#ff9823] !border-[#ff9823]",
             }}
             loop={true}
             breakpoints={{
@@ -115,19 +115,18 @@ export function CarouselSection() {
           >
             {carImages.map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="p-1">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    className="rounded-xl overflow-hidden aspect-video"
-                  >
-                    <img
-                      src={image.url}
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                </div>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-black/20"
+                >
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>

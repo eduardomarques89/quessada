@@ -60,7 +60,7 @@ export function LuxuryCarCarousel() {
           </p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-8">
+        <div className="relative max-w-5xl mx-auto px-8">
           <Swiper
             modules={[Pagination]}
             spaceBetween={20}
@@ -77,7 +77,7 @@ export function LuxuryCarCarousel() {
                 slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
             }}
             className="mySwiper !pb-12"

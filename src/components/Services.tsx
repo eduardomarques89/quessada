@@ -51,7 +51,8 @@ export function Services() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4 font-montserrat"
           >
-            Método de polimento proteção PREMIUM
+            Método de polimento proteção{" "}
+            <span className="text-[#ff9823]">PREMIUM</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -92,7 +93,7 @@ export function Services() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                 >
-                  <Card className="bg-[#232832] border-none hover:bg-[#2A303B] transition-all duration-300">
+                  <Card className="bg-[#060c18] border-none hover:bg-[#2A303B] transition-all duration-300">
                     <CardHeader>
                       <div
                         className={`w-14 h-14 rounded-xl ${service.color} flex items-center justify-center mb-4`}

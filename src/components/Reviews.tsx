@@ -5,28 +5,34 @@ import { motion } from "framer-motion";
 
 const reviews = [
   {
-    name: "Carlos Silva",
+    name: "Jake",
     rating: 5,
-    comment: "Excelente trabalho na higienização do meu carro. O pessoal da Quessada é muito profissional e atencioso. Recomendo!",
-    date: "Março 2024"
+    comment:
+      "Cheguei com um carro completamente riscado e sai com um novo!!! Serviço diferenciado, ótimo atendimento e trabalho impecável!!! Super recomendo!!!",
+    date: "Março 2023",
   },
   {
-    name: "Ana Paula",
+    name: "Carvalho",
     rating: 5,
-    comment: "Melhor serviço de estética automotiva da região! Meu carro ficou como novo após o polimento cristalizado.",
-    date: "Fevereiro 2024"
+    comment:
+      "Merecem 10 estrelas ! Muito educados e atenciosos. Serviço top, meu carro chegou um lixo e saiu de lá um luxo ! Serviço bem feito, preço justo ! Recomendo ! Podem levar sem medo, os caras são profissionais, deixa o carro lindo ! Muito sucesso porque merecem, são bons de Serviço",
+    date: "Fevereiro 2025",
   },
   {
-    name: "Ricardo Mendes",
+    name: "Hugo Fernandes",
     rating: 5,
-    comment: "Ótimo atendimento e resultado impecável na proteção cerâmica. Vale cada centavo investido!",
-    date: "Janeiro 2024"
-  }
+    comment:
+      "Excelente trabalho, a lavagem do carro ficou perfeita, não esqueceram de nenhum detalhe. Atendimento também excelente, tudo executado e entregue como o combinado",
+    date: "Janeiro 2025",
+  },
 ];
 
 export function Reviews() {
   const openWhatsApp = () => {
-    window.open("https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0", "_blank");
+    window.open(
+      "https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0",
+      "_blank"
+    );
   };
 
   const renderStars = (rating: number) => {
@@ -59,7 +65,7 @@ export function Reviews() {
             5.0 no Google • Mais de 100 avaliações
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <motion.div
@@ -68,15 +74,21 @@ export function Reviews() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <Card className="bg-[#1A1F2C] border-none hover:bg-[#232832] transition-all duration-300">
+              <Card className="bg-[#060c18] border-none hover:bg-[#232832] transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-4">
                     {renderStars(review.rating)}
                   </div>
-                  <p className="text-gray-300 mb-4 font-montserrat">{review.comment}</p>
+                  <p className="text-gray-300 mb-4 font-montserrat">
+                    {review.comment}
+                  </p>
                   <div className="flex justify-between items-center">
-                    <span className="font-bold text-white font-montserrat">{review.name}</span>
-                    <span className="text-sm text-gray-500 font-montserrat">{review.date}</span>
+                    <span className="font-bold text-white font-montserrat">
+                      {review.name}
+                    </span>
+                    <span className="text-sm text-gray-500 font-montserrat">
+                      {review.date}
+                    </span>
                   </div>
                 </CardContent>
               </Card>
@@ -90,7 +102,7 @@ export function Reviews() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <Button 
+          <Button
             onClick={openWhatsApp}
             size="lg"
             className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"

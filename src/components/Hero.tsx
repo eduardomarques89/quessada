@@ -1,22 +1,24 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export function Hero() {
   const openWhatsApp = () => {
-    window.open("https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0", "_blank");
+    window.open(
+      "https://api.whatsapp.com/send/?phone=551933665713&text=Oi+tudo+bem%2C+quero+agendar+&type=phone_number&app_absent=0",
+      "_blank"
+    );
   };
 
   return (
     <section className="relative min-h-screen bg-black overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80')] bg-cover bg-center opacity-10" />
-      
+
       <div className="container mx-auto px-4 relative z-20 h-screen">
         <div className="flex flex-col items-center">
           <div className="mb-8 mt-4">
-            <img 
-              src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png" 
-              alt="Quessada Estética Automotiva" 
+            <img
+              src="/lovable-uploads/2609704c-4ba5-4fca-a35f-cd621bb37f93.png"
+              alt="Quessada Estética Automotiva"
               className="h-16 mx-auto"
             />
           </div>
@@ -30,21 +32,21 @@ export function Hero() {
             >
               <h1 className="text-4xl md:text-5xl font-bold font-montserrat leading-tight">
                 Experimente o cuidado que seu{" "}
-                <span className="text-[#7689a9]">Carro</span> nunca teve
+                <span className="text-[#ff9823]">Carro</span> nunca teve
               </h1>
-              
+
               <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl font-montserrat mx-auto md:mx-0">
-                Descubra o poder da estética automotiva profissional. 
+                Descubra o poder da estética automotiva profissional.
                 Agendamento express com atendimento VIP garantido.
               </p>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="flex justify-center md:justify-start"
               >
-                <Button 
+                <Button
                   onClick={openWhatsApp}
                   size="lg"
                   className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 text-lg rounded-full font-montserrat font-medium"
@@ -53,7 +55,7 @@ export function Hero() {
                 </Button>
               </motion.div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
